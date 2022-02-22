@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <title>Document</title>
+    <script src="https://bytes.usc.edu/~saty/tools/xem/c/prtt.js"></script>
+
+</head>
+<body>
+        <div class = "navi">
+            <a href="" class="navibutt">Home</a>
+            <a href="notfound.html" class="navibutt">Explore</a>
+            <a href="notfound.html" class="navibutt">Contact</a>        
+        </div>
+    
+
+    <div class="sec1">
+        <div class="la">
+            <h1>LA - The City of Angels</h1>
+
+        </div>
+    </div>
+
+    <div class="sec2">
+        <div class="box">
+            <img src="griffith.jpg" alt="" style="width: 90%;height: 50%;padding: 5px;margin-left: 10px;border-radius: 15px;">
+            <h3 id="gohead"></h3>
+            <p id="gotext"></p>
+        </div>
+        <div class="box">
+            <img src="mountains.jpg" alt=""style="width: 90%;height: 50%;padding: 5px;margin-left: 10px;border-radius: 15px;">
+            <h3 id="mthead"></h3>
+            <p id="mttext"></p>
+        </div>
+        <div class="box">
+            <img src="universalstudios.jpg" alt=""style="width: 90%;height: 50%;padding: 5px;margin-left: 10px;border-radius: 15px;">
+            <h3 id="ushead"></h3>
+            <p id="ustext"></p>
+        </div>
+    </div>
+
+    <div class="sec3">
+        <div class="sec31">
+            <p>Los Angeles is the City of Dreams and is the heart of southern California. It is a vast and varied geographic entity. The city is famous  for being the home of the rich and famous, Hollywood, the main home of major entertainment companies, ethnically diverse, and the second-largest city in America.</p>
+            <p>The residents of Los Angeles are called Angelenos. Their lifestyle relies on the automobile, idealizes the single-family dwelling, and favours informality. With notable exceptions, the skyline is primarily horizontal rather than vertical. Los Angeles is a place of extraordinary ethnic and racial diversity, owing largely to immigration. It is a must visit place and a beautiful vacation desination.</p>
+        </div>
+        <div class="sec31">
+            <img src="lasky.png" alt="" style="width: 100%;height: 100%;">
+        </div>
+    </div>
+
+    <div class="sec4">
+        <div class="sec41">
+
+                <img src="hollywood.jpg" alt="" style="width: 500px;height: 300px;">
+        </div>
+        <div class="sec41">
+                <h2 style="text-align: end;" id="hollywood">HollyWood</h2>
+                <p id="hollywooddesc"></p>
+
+        </div>
+
+            <div class="sec42">
+                <h2 style="text-align: end;" id="beaches">Beaches</h2>
+                <p id = "beachesdesc"></p>
+            </div>
+            <div class="sec42">
+                <img src="beach.jpg" alt="" style="width: 500px;height: 300px;">
+            </div>
+    </div>
+
+<footer>
+    <div class="fot">
+        <h5>Tip the world over on its side and everything loose will land in Los Angeles</h5>
+        <h4>-Frank Lloyd Wright</h4>
+    </div>
+    <div class = "fot">
+        <h2>Designed By</h2>
+        <p>Vince Ling</p>
+        <p><a href = "mailto: ldkxnb@gmail.com" style="text-decoration: none;color: white;">ldkxnb@gmail.com</a></p>
+        <p><a href="tel:360-986-1899"style="text-decoration: none;color: white;">3609861899</a></p>
+    </div>
+
+  </footer>
+  
+</body>
+
+
+
+<script>
+  // fetch() is an alternate/better/newer way to fetch data,
+  // compared to XHR. Below, uncomment/comment either 'DATA'
+  // line... 
+  let DATA = 'https://raw.githubusercontent.com/VinceLing0529/571/main/data.json';  
+ 
+  async function fetchData() {
+   const response = await fetch(DATA); 
+    
+    // prtt all response headers
+    for (let [key, value] of response.headers) {
+      prtt(`${key} = ${value}`);
+    }
+    prtt("----------------------------------------------------------");
+     
+   let gd = await response.json(); // also try .json()
+   //prtt(gd);
+   return gd;
+  }
+var obj;
+  fetchData().then(
+    data => obj = data
+  ).then(
+      obj=>{
+        document.querySelector("#gohead").innerText = obj.section2[0].heading;
+        document.querySelector("#gotext").innerText = obj.section2[0].text;     
+        document.querySelector("#mthead").innerText = obj.section2[1].heading;
+        document.querySelector("#mttext").innerText = obj.section2[1].text;   
+        document.querySelector("#ushead").innerText = obj.section2[2].heading;
+        document.querySelector("#ustext").innerText = obj.section2[2].text;   
+        document.querySelector("#hollywood").innerText = obj.section4[0].heading;   
+        document.querySelector("#hollywooddesc").innerText = obj.section4[0].text;   
+        document.querySelector("#beaches").innerText = obj.section4[1].heading;   
+        document.querySelector("#beachesdesc").innerText = obj.section4[1].text;   
+
+         }
+  )
+
+
+</script>
+
+
+</html>

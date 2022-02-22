@@ -1,0 +1,167 @@
+body {
+    background-color: #1F2125;
+    font-family: 'Comfortaa';
+}
+
+  
+.la{
+    color:#F47920;
+    text-shadow: 1px 1px white;
+    position: absolute;
+    left:750px;
+    top:100px;
+}
+.navi{
+    font-size: 22px;
+    position: absolute;
+    left :650px;
+    top: 40px;
+    
+}
+
+.navibutt{
+    text-decoration: none;
+    padding: 50px;
+    color:white;
+    text-shadow: 2px 2px #F47920;
+}
+
+.sec1{
+    height: 400px;
+    width: 100%;
+    background-image: url("rodeo-drive.jpg");
+    background-size: 2000px;
+    position: relative;
+    top:100px;
+    background-position: 0 500px;
+    
+
+}
+
+.sec2{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 500px;
+    left: 400px;
+    color:white;
+}
+
+.box{
+    border-radius: 15px;
+    background-color: black;
+    height: 550px;
+    width: 300px;
+    margin: 30px;
+    display: inline-block;
+}
+
+.sec3{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 1100px;
+    background-color: black;
+
+}
+.sec31{
+    color: white;
+    height: 300px;
+    width: 500px;
+    display: inline-block;
+    margin-left: 300px;
+    margin-top:100px;
+}
+.sec4{
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    top: 1600px;
+    padding: 100px;
+    color: white;
+
+}
+
+.sec41{
+    display: inline-block;
+    height: 300px;
+    width: 700px;
+    margin-left: 100px;
+}
+
+.sec42{
+    display: inline-block;
+    height: 300px;
+    width: 700px;
+    margin-left:100px;
+    
+
+}
+footer{
+    width: 100%;
+    position: absolute;
+    bottom:-1800px;
+    background-color: black;
+}
+
+.fot{
+    margin-left: 300px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+}
+
+.foot{
+    width: 100%;
+    position: absolute;
+    bottom:-400px;
+    background-color: black;
+    
+}
+
+.image{
+    background-image: url("404-featured.jpg");
+
+    background-size:cover;
+    box-shadow:inset 0 0 0 2000px rgba(236, 147, 31, 0.911);
+    margin-top:100px;
+    height: 450px;
+    width: 100%;
+    background-position: 0 750px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.page1{
+    position: absolute;
+    margin-top: 175px;
+    margin-left:825px;
+    text-decoration: solid;
+}
+
+.NFT{
+    color: WHITE;
+    height: 350px;
+    width: 100%;
+   
+}
+
+.page2{
+    position: absolute;
+    margin-top: 175px;
+    margin-left:625px;
+    text-decoration: solid;
+}
+
+.page3{
+    position: absolute;
+    margin-top: 225px;
+    margin-left:500px;
+    text-decoration: solid;
+}
+.class{
+    padding: 5px;
+    max-width: 100%;
+    max-height: 100%;
+}
